@@ -1,3 +1,7 @@
+"""
+功能:批量docx文件转换为PDF
+环境:wind10 + pycharm2021 + python3.8 + office2013
+"""
 from win32com.client import Dispatch
 from os import walk
 class Docxpdf:
