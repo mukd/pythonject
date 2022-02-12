@@ -1,0 +1,5 @@
+报错:
+Push failed
+unable to access 'https://github.com/mukd/master.git/': OpenSSL SSL_read: Connection was reset, errno 10054
+#命令行执行以下语句
+git config --global http.sslbackend=openssl
