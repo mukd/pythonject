@@ -1,4 +1,3 @@
-
 """"
 功能:实现流星雨
 环境:python3.8 Jupyter Notebook
@@ -29,9 +28,17 @@ ax.set_ylim(-2, 3)
 ax.set_axis_off()  #取消坐标轴
 plt.show()
 """
+def pysim_bar():
+    import PySimpleGUI as sg
+    import time
+    count = range(100)
+    for i,item in enumerate(count):
+        sg.one_line_progress_meter('实时进度',i + 1,len(count),'-key-')
+        time.sleep(0.05)
 
 
-
+if __name__ == '__main__':
+    pysim_bar()
 
 
 

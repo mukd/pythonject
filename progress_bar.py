@@ -59,4 +59,4 @@ def prg_bar():
     for i in p(range(100)):
         time.sleep(0.05)
 if __name__ == '__main__':
-    prg_bar()
+    pysim_bar()
