@@ -2,7 +2,7 @@
 """"
 功能:实现流星雨
 环境:python3.8 Jupyter Notebook
-"""
+
 import numpy as np
 import matplotlib.pyplot as plt
 from numpy.random import rand, randint
@@ -28,4 +28,14 @@ ax.set_xlim(0, 6)
 ax.set_ylim(-2, 3)
 ax.set_axis_off()  #取消坐标轴
 plt.show()
+"""
+
+
+
+
+
+
+
+
+
 
