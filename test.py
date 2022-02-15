@@ -28,14 +28,40 @@ def file_manager(name,mode):
         yield f
     finally:
         f.close()
-
+#实现:
+#with file_manager('test.txt','r') as f:
+        #f.readline()
+'''
+*********创建类的迭代器******
+一个类作为一个迭代器使用需要在类中实现两个方法 __iter__() 与 __next__() 。
+'''
+class Mynumber():
+    def __iter__(self):
+        self.a = 1
+        return self
+    def __next__(self):
+        if self.a < 10:  #迭代次数，要不然for循环会一直执行
+            x = self.a
+            self.a +=1
+            return x
+        else:
+            raise StopIteration
+    '''
+    实现:
+    myclass = Mynumber()
+    myiter = iter(myclass)
+    for x in myiter:  # 里也可以直接用对象，因为它的类已经定义iter和next。
+        print(x, end=" ")
+    '''
 
 if __name__ == '__main__':
     #pysim_bar()
-    with file_manager('test.txt','r') as f:
-        f.readline()
-    
-
-
+    #with file_manager('test.txt','r') as f:
+        #f.readline()
+    #myclass = Mynumber()
+    #myiter = iter(myclass)
+    #for x in myiter:  #里也可以直接用对象，因为它的类已经定义iter和next。
+        #print(x,end=" ")
+    pass
 
 
