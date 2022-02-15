@@ -32,9 +32,9 @@ def file_manager(name,mode):
 
 if __name__ == '__main__':
     #pysim_bar()
-    with file_manager('test.txt','w') as f:
-        f.write('hello,world!')
-
+    with file_manager('test.txt','r') as f:
+        f.readline()
+    
 
 
 

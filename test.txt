@@ -3,3 +3,80 @@ Push failed
 unable to access 'https://github.com/mukd/master.git/': OpenSSL SSL_read: Connection was reset, errno 10054
 #命令行执行以下语句
 git config --global http.sslbackend=openssl
+python命名规则
+https://www.jb51.net/article/231020.htm
+"""
+*****Python写代码的七条重要技巧介绍****
+"""
+#命名规范
+#1.面向对象
+#单一职责和接口隔离都是为了提高类的内聚性，降低他们之间的耦合性。这是面向对象封装思想的完美体现
+#2.使用with
+#3.使用get
+#4.提前返回
+'平时写的代码中少不了 if else 等控制语句，但有时候有的小伙伴喜欢将 if else 嵌套好多层，过几个月之后自己都看不明白当时写的啥'
+比如下面这个程序，根据考试成绩来做评级。
+score = 100
+if score >= 60: # 及格
+    if score >= 70: # 中等
+        if score >= 80: # 良好
+            if score >= 90: # 优秀
+                if score >= 100: # 满分
+                    print("满分")
+                else:
+                    print("优秀")
+            else:
+                print("良好")
+        else:
+            print("中等")
+    else:
+        print("及格")
+else:
+    print("不及格")
+print("程序结束")
+score = 100
+if score >= 60: # 及格
+    if score >= 70: # 中等
+        if score >= 80: # 良好
+            if score >= 90: # 优秀
+                if score >= 100: # 满分
+                    print("满分")
+                else:
+                    print("优秀")
+            else:
+                print("良好")
+        else:
+            print("中等")
+    else:
+        print("及格")
+else:
+    print("不及格")
+print("程序结束")
+'这种代码一看就想打人有木有，可读性极差。'
+'代码的逻辑就是判断分数是否在一个区间，然后给出与之相匹配的评级，既然如此，则可以改写如下：'
+def get_score_level(score):
+    if score >= 100: # 满分
+        print("满分")
+        return
+
+    if score >= 90: # 优秀
+        print("优秀")
+        return
+
+    if score >= 80: # 良好
+        print("良好")
+        return
+
+    if score >= 70: # 中等
+        print("中等")
+        return
+
+    if score >= 60: # 及格
+        print("及格")
+        return
+
+    print("不及格")
+    print("程序结束")
+'这种处理方式是极其优雅的，从上往下清晰明了，大大增加了代码的可读性和可维护性。'
+#5.生成器
+#6.装饰器
