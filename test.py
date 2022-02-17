@@ -81,7 +81,7 @@ def zc4(n):
     return l
 
 #精确控制循环次数
-def zc5(n):
+def zc5(n) -> int : #定义函数时提供类型提示
    l = (i * 7 for i in range(n // 7))
    return l
 '''
@@ -106,6 +106,15 @@ def arrow_time():
     print(now.format('YYYY/MM/DD hh:mm:ss'))
     print(now.format('YYYY-MM-DD'))
 
+#队列
+from collections import deque
+class Queue():
+    def __init__(self):
+        self.s  = deque()
+    def push(self,el):
+        self.s.append(el)
+    def pop(self):
+        return self.popleft()
 
 
 if __name__ == '__main__':
@@ -119,7 +128,6 @@ if __name__ == '__main__':
     #print(list(zc3(14)))
     #print(list(zc4(14)))
     #print(list(zc5(14)))
-    arrow_time()
-
-
+    #arrow_time()
+    import pprint
 
