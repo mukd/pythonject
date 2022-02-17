@@ -54,6 +54,60 @@ class Mynumber():
         print(x, end=" ")
     '''
 
+"""
+******返回n以内的可以被7整除的数
+"""
+#方法1(不建议使用,常规思维，浪费内存)
+def zc(n):
+    l = []
+    for i in range(n+1):
+        if i % 7 ==0:
+            l.append(i)
+    return l
+
+#方法2(列表推导式)
+def zc2(n):
+    l = [ x for x in range(n+1) if x % 7 == 0]
+    return l
+
+#迭代器fiter
+def zc3(n):
+    l  = (i for i in range(n+1) if i % 7 == 0)
+    return l
+
+#过滤器filter和lambda(推荐方法)
+def zc4(n):
+    l = filter(lambda x: x % 7 == 0,range(n+1))
+    return l
+
+#精确控制循环次数
+def zc5(n):
+   l = (i * 7 for i in range(n // 7))
+   return l
+'''
+***列表浅拷贝和深拷贝
+'''
+def qs():
+    a = [1,2,3,4]
+    b = a #浅拷贝(b引用a列表)
+    b = a.copy() #深拷贝
+    b.append(5)
+"""
+********python 性能提升的几种方法
+"""
+'''
+********Python arrow 更好的日期时间模块
+'''
+import arrow
+def arrow_time():
+    now = arrow.now()
+    print(now)
+    print(now.format())
+    print(now.format('YYYY/MM/DD hh:mm:ss'))
+    print(now.format('YYYY-MM-DD'))
+
+
+
 if __name__ == '__main__':
     #pysim_bar()
     #with file_manager('test.txt','r') as f:
@@ -62,6 +116,10 @@ if __name__ == '__main__':
     #myiter = iter(myclass)
     #for x in myiter:  #里也可以直接用对象，因为它的类已经定义iter和next。
         #print(x,end=" ")
-    pass
+    #print(list(zc3(14)))
+    #print(list(zc4(14)))
+    #print(list(zc5(14)))
+    arrow_time()
+
 
 

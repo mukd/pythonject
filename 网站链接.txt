@@ -1,0 +1,13 @@
+##Anaconda官网
+https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/
+##清华源
+https://pypi.tuna.tsinghua.edu.cn/simple
+##oracle相关下载
+https://www.oracle.com/database/technologies/instant-client/winx64-64-downloads.html
+
+##git
+https://registry.npmmirror.com/binary.html?path=git-for-windows/
+#python官方文档
+https://docs.python.org/3/library/functions.html
+Oracle练习题
+https://www.cnblogs.com/xkk112/p/4769195.html
